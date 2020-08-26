@@ -1,0 +1,823 @@
+2020-08-17 15:32:18.440  INFO 6792 --- [restartedMain] com.shawf.ShawfBlogApplication           : Starting ShawfBlogApplication on LAPTOP-PQFH70O1 with PID 6792 (D:\document\springboot\shawf-blog\target\classes started by shwaf_lee in D:\document\springboot\shawf-blog)
+2020-08-17 15:32:18.456 DEBUG 6792 --- [restartedMain] com.shawf.ShawfBlogApplication           : Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2020-08-17 15:32:18.456  INFO 6792 --- [restartedMain] com.shawf.ShawfBlogApplication           : The following profiles are active: dev
+2020-08-17 15:32:18.518  INFO 6792 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in D:\Java\.m2_repsitory\org\glassfish\jaxb\jaxb-runtime\2.3.2\jaxb-runtime-2.3.2.jar referenced one or more files that do not exist: file:/D:/Java/.m2_repsitory/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.xml.bind-api-2.3.2.jar,file:/D:/Java/.m2_repsitory/org/glassfish/jaxb/jaxb-runtime/2.3.2/txw2-2.3.2.jar,file:/D:/Java/.m2_repsitory/org/glassfish/jaxb/jaxb-runtime/2.3.2/istack-commons-runtime-3.0.8.jar,file:/D:/Java/.m2_repsitory/org/glassfish/jaxb/jaxb-runtime/2.3.2/stax-ex-1.8.1.jar,file:/D:/Java/.m2_repsitory/org/glassfish/jaxb/jaxb-runtime/2.3.2/FastInfoset-1.2.16.jar,file:/D:/Java/.m2_repsitory/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.activation-api-1.2.1.jar
+2020-08-17 15:32:18.534  INFO 6792 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-08-17 15:32:18.534  INFO 6792 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-08-17 15:32:21.434  INFO 6792 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-08-17 15:32:21.560  INFO 6792 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 113ms. Found 5 repository interfaces.
+2020-08-17 15:32:22.150  INFO 6792 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-17 15:32:22.987  INFO 6792 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-08-17 15:32:23.021  INFO 6792 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-08-17 15:32:23.021  INFO 6792 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
+2020-08-17 15:32:23.200  INFO 6792 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-08-17 15:32:23.200  INFO 6792 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4666 ms
+2020-08-17 15:32:23.635  INFO 6792 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-08-17 15:32:23.785  INFO 6792 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.4.8.Final}
+2020-08-17 15:32:24.119  INFO 6792 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-08-17 15:32:24.310  INFO 6792 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-08-17 15:32:24.311  WARN 6792 --- [restartedMain] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2020-08-17 15:32:25.508  INFO 6792 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-08-17 15:32:25.561  INFO 6792 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2020-08-17 15:32:28.905  INFO 6792 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-08-17 15:32:28.937  INFO 6792 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-08-17 15:32:28.963  INFO 6792 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-08-17 15:32:30.260  WARN 6792 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-08-17 15:32:30.608  INFO 6792 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-08-17 15:32:30.761  INFO 6792 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-08-17 15:32:31.854  INFO 6792 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-08-17 15:32:31.856  INFO 6792 --- [restartedMain] com.shawf.ShawfBlogApplication           : Started ShawfBlogApplication in 15.135 seconds (JVM running for 23.095)
+2020-08-17 15:33:01.290  INFO 6792 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-08-17 15:33:01.290  INFO 6792 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-08-17 15:33:01.303  INFO 6792 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 13 ms
+2020-08-17 15:33:01.358  INFO 6792 --- [http-nio-8080-exec-1] com.shawf.aspect.LogAspect               : Request:RequestLog{url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.shawf.controller.IndexController.index', args=[Page request [number: 0, size 8, sort: lastUpdateTime: DESC], {}]}
+2020-08-17 15:33:02.432  WARN 6792 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogList.size]; use collection function syntax instead [size(t.blogList)].
+2020-08-17 15:33:02.564  WARN 6792 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogList.size]; use collection function syntax instead [size(t.blogList)].
+2020-08-17 15:33:02.698  INFO 6792 --- [http-nio-8080-exec-1] com.shawf.aspect.LogAspect               : Result:index
+2020-08-17 15:33:04.088  INFO 6792 --- [http-nio-8080-exec-3] com.shawf.aspect.LogAspect               : Request:RequestLog{url='http://127.0.0.1:8080/footer/newBlog', ip='127.0.0.1', classMethod='com.shawf.controller.IndexController.newBlogList', args=[{}]}
+2020-08-17 15:33:04.886  INFO 6792 --- [http-nio-8080-exec-3] com.shawf.aspect.LogAspect               : Result:_modes::newBlogList
+2020-08-17 15:34:40.269  INFO 6792 --- [http-nio-8080-exec-10] com.shawf.aspect.LogAspect               : Request:RequestLog{url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.shawf.controller.IndexController.index', args=[Page request [number: 0, size 8, sort: lastUpdateTime: DESC], {}]}
+2020-08-17 15:34:41.270  INFO 6792 --- [http-nio-8080-exec-10] com.shawf.aspect.LogAspect               : Result:index
+2020-08-17 15:34:42.154  INFO 6792 --- [http-nio-8080-exec-6] com.shawf.aspect.LogAspect               : Request:RequestLog{url='http://127.0.0.1:8080/footer/newBlog', ip='127.0.0.1', classMethod='com.shawf.controller.IndexController.newBlogList', args=[{}]}
+2020-08-17 15:34:42.472  INFO 6792 --- [http-nio-8080-exec-6] com.shawf.aspect.LogAspect               : Result:_modes::newBlogList
+2020-08-17 15:34:50.208  INFO 6792 --- [http-nio-8080-exec-2] com.shawf.aspect.LogAspect               : Request:RequestLog{url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.shawf.controller.IndexController.index', args=[Page request [number: 0, size 8, sort: lastUpdateTime: DESC], {}]}
+2020-08-17 15:34:51.074  INFO 6792 --- [http-nio-8080-exec-2] com.shawf.aspect.LogAspect               : Result:index
+2020-08-17 15:34:52.337  INFO 6792 --- [http-nio-8080-exec-4] com.shawf.aspect.LogAspect               : Request:RequestLog{url='http://127.0.0.1:8080/footer/newBlog', ip='127.0.0.1', classMethod='com.shawf.controller.IndexController.newBlogList', args=[{}]}
+2020-08-17 15:34:52.598  INFO 6792 --- [http-nio-8080-exec-4] com.shawf.aspect.LogAspect               : Result:_modes::newBlogList
+2020-08-17 15:34:58.894  INFO 6792 --- [http-nio-8080-exec-5] com.shawf.aspect.LogAspect               : Request:RequestLog{url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.shawf.controller.IndexController.index', args=[Page request [number: 0, size 8, sort: lastUpdateTime: DESC], {}]}
+2020-08-17 15:35:00.213  INFO 6792 --- [http-nio-8080-exec-5] com.shawf.aspect.LogAspect               : Result:index
+2020-08-17 15:35:00.974  INFO 6792 --- [http-nio-8080-exec-6] com.shawf.aspect.LogAspect               : Request:RequestLog{url='http://127.0.0.1:8080/footer/newBlog', ip='127.0.0.1', classMethod='com.shawf.controller.IndexController.newBlogList', args=[{}]}
+2020-08-17 15:35:01.209  INFO 6792 --- [http-nio-8080-exec-6] com.shawf.aspect.LogAspect               : Result:_modes::newBlogList
+2020-08-17 15:35:46.548  INFO 6792 --- [http-nio-8080-exec-2] com.shawf.aspect.LogAspect               : Request:RequestLog{url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.shawf.controller.IndexController.index', args=[Page request [number: 0, size 8, sort: lastUpdateTime: DESC], {}]}
+2020-08-17 15:35:48.552  INFO 6792 --- [http-nio-8080-exec-2] com.shawf.aspect.LogAspect               : Result:index
+2020-08-17 15:35:49.404  INFO 6792 --- [http-nio-8080-exec-5] com.shawf.aspect.LogAspect               : Request:RequestLog{url='http://127.0.0.1:8080/footer/newBlog', ip='127.0.0.1', classMethod='com.shawf.controller.IndexController.newBlogList', args=[{}]}
+2020-08-17 15:35:50.091  INFO 6792 --- [http-nio-8080-exec-5] com.shawf.aspect.LogAspect               : Result:_modes::newBlogList
+2020-08-17 15:40:57.631  INFO 6792 --- [http-nio-8080-exec-6] com.shawf.aspect.LogAspect               : Request:RequestLog{url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.shawf.controller.IndexController.index', args=[Page request [number: 0, size 8, sort: lastUpdateTime: DESC], {}]}
+2020-08-17 15:40:59.701  INFO 6792 --- [http-nio-8080-exec-6] com.shawf.aspect.LogAspect               : Result:index
+2020-08-17 15:41:00.790  INFO 6792 --- [http-nio-8080-exec-8] com.shawf.aspect.LogAspect               : Request:RequestLog{url='http://127.0.0.1:8080/footer/newBlog', ip='127.0.0.1', classMethod='com.shawf.controller.IndexController.newBlogList', args=[{}]}
+2020-08-17 15:41:01.118  INFO 6792 --- [http-nio-8080-exec-8] com.shawf.aspect.LogAspect               : Result:_modes::newBlogList
+2020-08-17 15:41:33.247  INFO 6792 --- [http-nio-8080-exec-5] com.shawf.aspect.LogAspect               : Request:RequestLog{url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.shawf.controller.IndexController.index', args=[Page request [number: 0, size 8, sort: lastUpdateTime: DESC], {}]}
+2020-08-17 15:41:34.356  INFO 6792 --- [http-nio-8080-exec-5] com.shawf.aspect.LogAspect               : Result:index
+2020-08-17 15:41:35.397  INFO 6792 --- [http-nio-8080-exec-6] com.shawf.aspect.LogAspect               : Request:RequestLog{url='http://127.0.0.1:8080/footer/newBlog', ip='127.0.0.1', classMethod='com.shawf.controller.IndexController.newBlogList', args=[{}]}
+2020-08-17 15:41:35.870  INFO 6792 --- [http-nio-8080-exec-6] com.shawf.aspect.LogAspect               : Result:_modes::newBlogList
+2020-08-17 15:42:23.596  INFO 6792 --- [http-nio-8080-exec-10] com.shawf.aspect.LogAspect               : Request:RequestLog{url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.shawf.controller.IndexController.index', args=[Page request [number: 0, size 8, sort: lastUpdateTime: DESC], {}]}
+2020-08-17 15:42:25.206  INFO 6792 --- [http-nio-8080-exec-10] com.shawf.aspect.LogAspect               : Result:index
+2020-08-17 15:42:26.766  INFO 6792 --- [http-nio-8080-exec-1] com.shawf.aspect.LogAspect               : Request:RequestLog{url='http://127.0.0.1:8080/footer/newBlog', ip='127.0.0.1', classMethod='com.shawf.controller.IndexController.newBlogList', args=[{}]}
+2020-08-17 15:42:27.023  INFO 6792 --- [http-nio-8080-exec-1] com.shawf.aspect.LogAspect               : Result:_modes::newBlogList
+2020-08-17 15:42:53.059  INFO 6792 --- [http-nio-8080-exec-7] com.shawf.aspect.LogAspect               : Request:RequestLog{url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.shawf.controller.IndexController.index', args=[Page request [number: 0, size 8, sort: lastUpdateTime: DESC], {}]}
+2020-08-17 15:42:54.263  INFO 6792 --- [http-nio-8080-exec-7] com.shawf.aspect.LogAspect               : Result:index
+2020-08-17 15:42:55.141  INFO 6792 --- [http-nio-8080-exec-5] com.shawf.aspect.LogAspect               : Request:RequestLog{url='http://127.0.0.1:8080/footer/newBlog', ip='127.0.0.1', classMethod='com.shawf.controller.IndexController.newBlogList', args=[{}]}
+2020-08-17 15:42:55.518  INFO 6792 --- [http-nio-8080-exec-5] com.shawf.aspect.LogAspect               : Result:_modes::newBlogList
+2020-08-17 15:43:05.356  INFO 6792 --- [http-nio-8080-exec-10] com.shawf.aspect.LogAspect               : Request:RequestLog{url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.shawf.controller.IndexController.index', args=[Page request [number: 0, size 8, sort: lastUpdateTime: DESC], {}]}
+2020-08-17 15:43:06.018  INFO 6792 --- [http-nio-8080-exec-10] com.shawf.aspect.LogAspect               : Result:index
+2020-08-17 15:43:06.574  INFO 6792 --- [http-nio-8080-exec-8] com.shawf.aspect.LogAspect               : Request:RequestLog{url='http://127.0.0.1:8080/footer/newBlog', ip='127.0.0.1', classMethod='com.shawf.controller.IndexController.newBlogList', args=[{}]}
+2020-08-17 15:43:06.687  INFO 6792 --- [http-nio-8080-exec-8] com.shawf.aspect.LogAspect               : Result:_modes::newBlogList
+2020-08-17 15:43:23.191  INFO 6792 --- [http-nio-8080-exec-1] com.shawf.aspect.LogAspect               : Request:RequestLog{url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.shawf.controller.IndexController.index', args=[Page request [number: 0, size 8, sort: lastUpdateTime: DESC], {}]}
+2020-08-17 15:43:23.893  INFO 6792 --- [http-nio-8080-exec-1] com.shawf.aspect.LogAspect               : Result:index
+2020-08-17 15:43:24.655  INFO 6792 --- [http-nio-8080-exec-3] com.shawf.aspect.LogAspect               : Request:RequestLog{url='http://127.0.0.1:8080/footer/newBlog', ip='127.0.0.1', classMethod='com.shawf.controller.IndexController.newBlogList', args=[{}]}
+2020-08-17 15:43:24.777  INFO 6792 --- [http-nio-8080-exec-3] com.shawf.aspect.LogAspect               : Result:_modes::newBlogList
+2020-08-17 15:46:44.799  INFO 6792 --- [http-nio-8080-exec-9] com.shawf.aspect.LogAspect               : Request:RequestLog{url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.shawf.controller.IndexController.index', args=[Page request [number: 0, size 8, sort: lastUpdateTime: DESC], {}]}
+2020-08-17 15:46:45.300  INFO 6792 --- [http-nio-8080-exec-9] com.shawf.aspect.LogAspect               : Result:index
+2020-08-17 15:46:45.863  INFO 6792 --- [http-nio-8080-exec-10] com.shawf.aspect.LogAspect               : Request:RequestLog{url='http://127.0.0.1:8080/footer/newBlog', ip='127.0.0.1', classMethod='com.shawf.controller.IndexController.newBlogList', args=[{}]}
+2020-08-17 15:46:45.976  INFO 6792 --- [http-nio-8080-exec-10] com.shawf.aspect.LogAspect               : Result:_modes::newBlogList
+2020-08-17 15:46:53.683  INFO 6792 --- [http-nio-8080-exec-5] com.shawf.aspect.LogAspect               : Request:RequestLog{url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.shawf.controller.IndexController.index', args=[Page request [number: 0, size 8, sort: lastUpdateTime: DESC], {}]}
+2020-08-17 15:46:54.205  INFO 6792 --- [http-nio-8080-exec-5] com.shawf.aspect.LogAspect               : Result:index
+2020-08-17 15:46:54.668  INFO 6792 --- [http-nio-8080-exec-7] com.shawf.aspect.LogAspect               : Request:RequestLog{url='http://127.0.0.1:8080/footer/newBlog', ip='127.0.0.1', classMethod='com.shawf.controller.IndexController.newBlogList', args=[{}]}
+2020-08-17 15:46:54.780  INFO 6792 --- [http-nio-8080-exec-7] com.shawf.aspect.LogAspect               : Result:_modes::newBlogList
+2020-08-17 15:47:05.311  INFO 6792 --- [http-nio-8080-exec-4] com.shawf.aspect.LogAspect               : Request:RequestLog{url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.shawf.controller.IndexController.index', args=[Page request [number: 0, size 8, sort: lastUpdateTime: DESC], {}]}
+2020-08-17 15:47:06.108  INFO 6792 --- [http-nio-8080-exec-4] com.shawf.aspect.LogAspect               : Result:index
+2020-08-17 15:47:06.602  INFO 6792 --- [http-nio-8080-exec-4] com.shawf.aspect.LogAspect               : Request:RequestLog{url='http://127.0.0.1:8080/footer/newBlog', ip='127.0.0.1', classMethod='com.shawf.controller.IndexController.newBlogList', args=[{}]}
+2020-08-17 15:47:06.721  INFO 6792 --- [http-nio-8080-exec-4] com.shawf.aspect.LogAspect               : Result:_modes::newBlogList
+2020-08-17 15:47:13.856  INFO 6792 --- [http-nio-8080-exec-8] com.shawf.aspect.LogAspect               : Request:RequestLog{url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.shawf.controller.IndexController.index', args=[Page request [number: 0, size 8, sort: lastUpdateTime: DESC], {}]}
+2020-08-17 15:47:15.126  INFO 6792 --- [http-nio-8080-exec-8] com.shawf.aspect.LogAspect               : Result:index
+2020-08-17 15:47:15.700  INFO 6792 --- [http-nio-8080-exec-1] com.shawf.aspect.LogAspect               : Request:RequestLog{url='http://127.0.0.1:8080/footer/newBlog', ip='127.0.0.1', classMethod='com.shawf.controller.IndexController.newBlogList', args=[{}]}
+2020-08-17 15:47:15.832  INFO 6792 --- [http-nio-8080-exec-1] com.shawf.aspect.LogAspect               : Result:_modes::newBlogList
+2020-08-17 15:47:17.686  INFO 6792 --- [http-nio-8080-exec-10] com.shawf.aspect.LogAspect               : Request:RequestLog{url='http://127.0.0.1:8080/type/-1', ip='127.0.0.1', classMethod='com.shawf.controller.ListTypeController.type', args=[Page request [number: 0, size 8, sort: lastUpdateTime: DESC], -1, {}]}
+2020-08-17 15:47:18.066  INFO 6792 --- [http-nio-8080-exec-10] com.shawf.aspect.LogAspect               : Result:types
+2020-08-17 15:47:18.562  INFO 6792 --- [http-nio-8080-exec-3] com.shawf.aspect.LogAspect               : Request:RequestLog{url='http://127.0.0.1:8080/footer/newBlog', ip='127.0.0.1', classMethod='com.shawf.controller.IndexController.newBlogList', args=[{}]}
+2020-08-17 15:47:18.703  INFO 6792 --- [http-nio-8080-exec-3] com.shawf.aspect.LogAspect               : Result:_modes::newBlogList
+2020-08-17 15:47:19.350  INFO 6792 --- [http-nio-8080-exec-9] com.shawf.aspect.LogAspect               : Request:RequestLog{url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.shawf.controller.IndexController.index', args=[Page request [number: 0, size 8, sort: lastUpdateTime: DESC], {}]}
+2020-08-17 15:47:19.835  INFO 6792 --- [http-nio-8080-exec-9] com.shawf.aspect.LogAspect               : Result:index
+2020-08-17 15:47:20.267  INFO 6792 --- [http-nio-8080-exec-6] com.shawf.aspect.LogAspect               : Request:RequestLog{url='http://127.0.0.1:8080/footer/newBlog', ip='127.0.0.1', classMethod='com.shawf.controller.IndexController.newBlogList', args=[{}]}
+2020-08-17 15:47:20.380  INFO 6792 --- [http-nio-8080-exec-6] com.shawf.aspect.LogAspect               : Result:_modes::newBlogList
+2020-08-17 15:47:32.779  INFO 6792 --- [http-nio-8080-exec-5] com.shawf.aspect.LogAspect               : Request:RequestLog{url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.shawf.controller.IndexController.index', args=[Page request [number: 0, size 8, sort: lastUpdateTime: DESC], {}]}
+2020-08-17 15:47:33.680  INFO 6792 --- [http-nio-8080-exec-5] com.shawf.aspect.LogAspect               : Result:index
+2020-08-17 15:47:34.410  INFO 6792 --- [http-nio-8080-exec-1] com.shawf.aspect.LogAspect               : Request:RequestLog{url='http://127.0.0.1:8080/footer/newBlog', ip='127.0.0.1', classMethod='com.shawf.controller.IndexController.newBlogList', args=[{}]}
+2020-08-17 15:47:34.628  INFO 6792 --- [http-nio-8080-exec-1] com.shawf.aspect.LogAspect               : Result:_modes::newBlogList
+2020-08-17 15:48:45.599  INFO 6792 --- [http-nio-8080-exec-6] com.shawf.aspect.LogAspect               : Request:RequestLog{url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.shawf.controller.IndexController.index', args=[Page request [number: 0, size 8, sort: lastUpdateTime: DESC], {}]}
+2020-08-17 15:48:46.159  INFO 6792 --- [http-nio-8080-exec-6] com.shawf.aspect.LogAspect               : Result:index
+2020-08-17 15:48:46.676  INFO 6792 --- [http-nio-8080-exec-7] com.shawf.aspect.LogAspect               : Request:RequestLog{url='http://127.0.0.1:8080/footer/newBlog', ip='127.0.0.1', classMethod='com.shawf.controller.IndexController.newBlogList', args=[{}]}
+2020-08-17 15:48:46.786  INFO 6792 --- [http-nio-8080-exec-7] com.shawf.aspect.LogAspect               : Result:_modes::newBlogList
+2020-08-17 15:49:00.692  INFO 6792 --- [http-nio-8080-exec-2] com.shawf.aspect.LogAspect               : Request:RequestLog{url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.shawf.controller.IndexController.index', args=[Page request [number: 0, size 8, sort: lastUpdateTime: DESC], {}]}
+2020-08-17 15:49:01.211  INFO 6792 --- [http-nio-8080-exec-2] com.shawf.aspect.LogAspect               : Result:index
+2020-08-17 15:49:01.755  INFO 6792 --- [http-nio-8080-exec-8] com.shawf.aspect.LogAspect               : Request:RequestLog{url='http://127.0.0.1:8080/footer/newBlog', ip='127.0.0.1', classMethod='com.shawf.controller.IndexController.newBlogList', args=[{}]}
+2020-08-17 15:49:01.914  INFO 6792 --- [http-nio-8080-exec-8] com.shawf.aspect.LogAspect               : Result:_modes::newBlogList
+2020-08-17 15:49:11.880  INFO 6792 --- [http-nio-8080-exec-10] com.shawf.aspect.LogAspect               : Request:RequestLog{url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.shawf.controller.IndexController.index', args=[Page request [number: 0, size 8, sort: lastUpdateTime: DESC], {}]}
+2020-08-17 15:49:12.559  INFO 6792 --- [http-nio-8080-exec-10] com.shawf.aspect.LogAspect               : Result:index
+2020-08-17 15:49:13.029  INFO 6792 --- [http-nio-8080-exec-9] com.shawf.aspect.LogAspect               : Request:RequestLog{url='http://127.0.0.1:8080/footer/newBlog', ip='127.0.0.1', classMethod='com.shawf.controller.IndexController.newBlogList', args=[{}]}
+2020-08-17 15:49:13.142  INFO 6792 --- [http-nio-8080-exec-9] com.shawf.aspect.LogAspect               : Result:_modes::newBlogList
+2020-08-17 15:49:17.725  INFO 6792 --- [http-nio-8080-exec-3] com.shawf.aspect.LogAspect               : Request:RequestLog{url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.shawf.controller.IndexController.index', args=[Page request [number: 0, size 8, sort: lastUpdateTime: DESC], {}]}
+2020-08-17 15:49:18.315  INFO 6792 --- [http-nio-8080-exec-3] com.shawf.aspect.LogAspect               : Result:index
+2020-08-17 15:49:18.778  INFO 6792 --- [http-nio-8080-exec-10] com.shawf.aspect.LogAspect               : Request:RequestLog{url='http://127.0.0.1:8080/footer/newBlog', ip='127.0.0.1', classMethod='com.shawf.controller.IndexController.newBlogList', args=[{}]}
+2020-08-17 15:49:18.891  INFO 6792 --- [http-nio-8080-exec-10] com.shawf.aspect.LogAspect               : Result:_modes::newBlogList
+2020-08-17 16:01:35.082  INFO 6792 --- [http-nio-8080-exec-2] com.shawf.aspect.LogAspect               : Request:RequestLog{url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.shawf.controller.IndexController.index', args=[Page request [number: 0, size 8, sort: lastUpdateTime: DESC], {}]}
+2020-08-17 16:01:35.585  INFO 6792 --- [http-nio-8080-exec-2] com.shawf.aspect.LogAspect               : Result:index
+2020-08-17 16:01:36.185  INFO 6792 --- [http-nio-8080-exec-4] com.shawf.aspect.LogAspect               : Request:RequestLog{url='http://127.0.0.1:8080/footer/newBlog', ip='127.0.0.1', classMethod='com.shawf.controller.IndexController.newBlogList', args=[{}]}
+2020-08-17 16:01:36.313  INFO 6792 --- [http-nio-8080-exec-4] com.shawf.aspect.LogAspect               : Result:_modes::newBlogList
+2020-08-17 16:01:39.654  INFO 6792 --- [http-nio-8080-exec-10] com.shawf.aspect.LogAspect               : Request:RequestLog{url='http://127.0.0.1:8080/type/-1', ip='127.0.0.1', classMethod='com.shawf.controller.ListTypeController.type', args=[Page request [number: 0, size 8, sort: lastUpdateTime: DESC], -1, {}]}
+2020-08-17 16:01:40.064  INFO 6792 --- [http-nio-8080-exec-10] com.shawf.aspect.LogAspect               : Result:types
+2020-08-17 16:01:40.596  INFO 6792 --- [http-nio-8080-exec-3] com.shawf.aspect.LogAspect               : Request:RequestLog{url='http://127.0.0.1:8080/footer/newBlog', ip='127.0.0.1', classMethod='com.shawf.controller.IndexController.newBlogList', args=[{}]}
+2020-08-17 16:01:40.777  INFO 6792 --- [http-nio-8080-exec-3] com.shawf.aspect.LogAspect               : Result:_modes::newBlogList
+2020-08-17 16:01:53.564  INFO 6792 --- [http-nio-8080-exec-2] com.shawf.aspect.LogAspect               : Request:RequestLog{url='http://127.0.0.1:8080/type/-1', ip='127.0.0.1', classMethod='com.shawf.controller.ListTypeController.type', args=[Page request [number: 0, size 8, sort: lastUpdateTime: DESC], -1, {}]}
+2020-08-17 16:01:58.595  WARN 6792 --- [http-nio-8080-exec-2] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@b3238b2 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-08-17 16:02:03.598  WARN 6792 --- [http-nio-8080-exec-2] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@2c53a0a1 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-08-17 16:02:08.601  WARN 6792 --- [http-nio-8080-exec-2] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@5d4d54ba (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-08-17 16:02:13.604  WARN 6792 --- [http-nio-8080-exec-2] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@4122d046 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-08-17 16:02:14.032  INFO 6792 --- [http-nio-8080-exec-2] com.shawf.aspect.LogAspect               : Result:types
+2020-08-17 16:02:14.557  INFO 6792 --- [http-nio-8080-exec-5] com.shawf.aspect.LogAspect               : Request:RequestLog{url='http://127.0.0.1:8080/footer/newBlog', ip='127.0.0.1', classMethod='com.shawf.controller.IndexController.newBlogList', args=[{}]}
+2020-08-17 16:02:14.701  INFO 6792 --- [http-nio-8080-exec-5] com.shawf.aspect.LogAspect               : Result:_modes::newBlogList
+2020-08-17 16:02:35.821  INFO 6792 --- [http-nio-8080-exec-6] com.shawf.aspect.LogAspect               : Request:RequestLog{url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.shawf.controller.IndexController.index', args=[Page request [number: 0, size 8, sort: lastUpdateTime: DESC], {}]}
+2020-08-17 16:02:36.708  INFO 6792 --- [http-nio-8080-exec-6] com.shawf.aspect.LogAspect               : Result:index
+2020-08-17 16:02:37.364  INFO 6792 --- [http-nio-8080-exec-10] com.shawf.aspect.LogAspect               : Request:RequestLog{url='http://127.0.0.1:8080/footer/newBlog', ip='127.0.0.1', classMethod='com.shawf.controller.IndexController.newBlogList', args=[{}]}
+2020-08-17 16:02:37.603  INFO 6792 --- [http-nio-8080-exec-10] com.shawf.aspect.LogAspect               : Result:_modes::newBlogList
+2020-08-17 16:03:20.887  INFO 6792 --- [http-nio-8080-exec-3] com.shawf.aspect.LogAspect               : Request:RequestLog{url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.shawf.controller.IndexController.index', args=[Page request [number: 0, size 8, sort: lastUpdateTime: DESC], {}]}
+2020-08-17 16:03:21.431  INFO 6792 --- [http-nio-8080-exec-3] com.shawf.aspect.LogAspect               : Result:index
+2020-08-17 16:03:21.950  INFO 6792 --- [http-nio-8080-exec-2] com.shawf.aspect.LogAspect               : Request:RequestLog{url='http://127.0.0.1:8080/footer/newBlog', ip='127.0.0.1', classMethod='com.shawf.controller.IndexController.newBlogList', args=[{}]}
+2020-08-17 16:03:22.062  INFO 6792 --- [http-nio-8080-exec-2] com.shawf.aspect.LogAspect               : Result:_modes::newBlogList
+2020-08-17 16:03:31.942  INFO 6792 --- [http-nio-8080-exec-6] com.shawf.aspect.LogAspect               : Request:RequestLog{url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.shawf.controller.IndexController.index', args=[Page request [number: 0, size 8, sort: lastUpdateTime: DESC], {}]}
+2020-08-17 16:03:32.582  INFO 6792 --- [http-nio-8080-exec-6] com.shawf.aspect.LogAspect               : Result:index
+2020-08-17 16:03:33.097  INFO 6792 --- [http-nio-8080-exec-10] com.shawf.aspect.LogAspect               : Request:RequestLog{url='http://127.0.0.1:8080/footer/newBlog', ip='127.0.0.1', classMethod='com.shawf.controller.IndexController.newBlogList', args=[{}]}
+2020-08-17 16:03:33.237  INFO 6792 --- [http-nio-8080-exec-10] com.shawf.aspect.LogAspect               : Result:_modes::newBlogList
+2020-08-17 16:03:35.407  INFO 6792 --- [http-nio-8080-exec-5] com.shawf.aspect.LogAspect               : Request:RequestLog{url='http://127.0.0.1:8080/me', ip='127.0.0.1', classMethod='com.shawf.controller.MeController.me', args=[]}
+2020-08-17 16:03:35.418  INFO 6792 --- [http-nio-8080-exec-5] com.shawf.aspect.LogAspect               : Result:me
+2020-08-17 16:03:35.736  INFO 6792 --- [http-nio-8080-exec-4] com.shawf.aspect.LogAspect               : Request:RequestLog{url='http://127.0.0.1:8080/footer/newBlog', ip='127.0.0.1', classMethod='com.shawf.controller.IndexController.newBlogList', args=[{}]}
+2020-08-17 16:03:35.892  INFO 6792 --- [http-nio-8080-exec-4] com.shawf.aspect.LogAspect               : Result:_modes::newBlogList
+2020-08-17 16:03:37.359  INFO 6792 --- [http-nio-8080-exec-2] com.shawf.aspect.LogAspect               : Request:RequestLog{url='http://127.0.0.1:8080/archive', ip='127.0.0.1', classMethod='com.shawf.controller.ArchiveController.archive', args=[{}]}
+2020-08-17 16:03:37.818  INFO 6792 --- [http-nio-8080-exec-2] com.shawf.aspect.LogAspect               : Result:archives
+2020-08-17 16:03:38.145  INFO 6792 --- [http-nio-8080-exec-10] com.shawf.aspect.LogAspect               : Request:RequestLog{url='http://127.0.0.1:8080/footer/newBlog', ip='127.0.0.1', classMethod='com.shawf.controller.IndexController.newBlogList', args=[{}]}
+2020-08-17 16:03:38.260  INFO 6792 --- [http-nio-8080-exec-10] com.shawf.aspect.LogAspect               : Result:_modes::newBlogList
+2020-08-17 16:03:38.621  INFO 6792 --- [http-nio-8080-exec-1] com.shawf.aspect.LogAspect               : Request:RequestLog{url='http://127.0.0.1:8080/tag/-1', ip='127.0.0.1', classMethod='com.shawf.controller.ListTagController.tag', args=[Page request [number: 0, size 8, sort: lastUpdateTime: DESC], -1, {}]}
+2020-08-17 16:03:39.065  INFO 6792 --- [http-nio-8080-exec-1] com.shawf.aspect.LogAspect               : Result:tags
+2020-08-17 16:03:39.517  INFO 6792 --- [http-nio-8080-exec-3] com.shawf.aspect.LogAspect               : Request:RequestLog{url='http://127.0.0.1:8080/footer/newBlog', ip='127.0.0.1', classMethod='com.shawf.controller.IndexController.newBlogList', args=[{}]}
+2020-08-17 16:03:39.642  INFO 6792 --- [http-nio-8080-exec-3] com.shawf.aspect.LogAspect               : Result:_modes::newBlogList
+2020-08-17 16:03:40.016  INFO 6792 --- [http-nio-8080-exec-7] com.shawf.aspect.LogAspect               : Request:RequestLog{url='http://127.0.0.1:8080/type/-1', ip='127.0.0.1', classMethod='com.shawf.controller.ListTypeController.type', args=[Page request [number: 0, size 8, sort: lastUpdateTime: DESC], -1, {}]}
+2020-08-17 16:03:40.337  INFO 6792 --- [http-nio-8080-exec-7] com.shawf.aspect.LogAspect               : Result:types
+2020-08-17 16:03:40.772  INFO 6792 --- [http-nio-8080-exec-2] com.shawf.aspect.LogAspect               : Request:RequestLog{url='http://127.0.0.1:8080/footer/newBlog', ip='127.0.0.1', classMethod='com.shawf.controller.IndexController.newBlogList', args=[{}]}
+2020-08-17 16:03:40.895  INFO 6792 --- [http-nio-8080-exec-2] com.shawf.aspect.LogAspect               : Result:_modes::newBlogList
+2020-08-17 16:03:41.102  INFO 6792 --- [http-nio-8080-exec-4] com.shawf.aspect.LogAspect               : Request:RequestLog{url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.shawf.controller.IndexController.index', args=[Page request [number: 0, size 8, sort: lastUpdateTime: DESC], {}]}
+2020-08-17 16:03:41.561  INFO 6792 --- [http-nio-8080-exec-4] com.shawf.aspect.LogAspect               : Result:index
+2020-08-17 16:03:42.014  INFO 6792 --- [http-nio-8080-exec-10] com.shawf.aspect.LogAspect               : Request:RequestLog{url='http://127.0.0.1:8080/footer/newBlog', ip='127.0.0.1', classMethod='com.shawf.controller.IndexController.newBlogList', args=[{}]}
+2020-08-17 16:03:42.137  INFO 6792 --- [http-nio-8080-exec-10] com.shawf.aspect.LogAspect               : Result:_modes::newBlogList
+2020-08-17 16:13:47.834  INFO 6792 --- [http-nio-8080-exec-5] com.shawf.aspect.LogAspect               : Request:RequestLog{url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.shawf.controller.IndexController.index', args=[Page request [number: 0, size 8, sort: lastUpdateTime: DESC], {}]}
+2020-08-17 16:13:48.996  INFO 6792 --- [http-nio-8080-exec-5] com.shawf.aspect.LogAspect               : Result:index
+2020-08-17 16:13:49.880  INFO 6792 --- [http-nio-8080-exec-3] com.shawf.aspect.LogAspect               : Request:RequestLog{url='http://127.0.0.1:8080/footer/newBlog', ip='127.0.0.1', classMethod='com.shawf.controller.IndexController.newBlogList', args=[{}]}
+2020-08-17 16:13:50.220  INFO 6792 --- [http-nio-8080-exec-3] com.shawf.aspect.LogAspect               : Result:_modes::newBlogList
+2020-08-17 16:13:57.193  INFO 6792 --- [http-nio-8080-exec-1] com.shawf.aspect.LogAspect               : Request:RequestLog{url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.shawf.controller.IndexController.index', args=[Page request [number: 0, size 8, sort: lastUpdateTime: DESC], {}]}
+2020-08-17 16:13:57.834  INFO 6792 --- [http-nio-8080-exec-1] com.shawf.aspect.LogAspect               : Result:index
+2020-08-17 16:13:58.345  INFO 6792 --- [http-nio-8080-exec-4] com.shawf.aspect.LogAspect               : Request:RequestLog{url='http://127.0.0.1:8080/footer/newBlog', ip='127.0.0.1', classMethod='com.shawf.controller.IndexController.newBlogList', args=[{}]}
+2020-08-17 16:13:58.499  INFO 6792 --- [http-nio-8080-exec-4] com.shawf.aspect.LogAspect               : Result:_modes::newBlogList
+2020-08-17 16:14:57.588  INFO 6792 --- [http-nio-8080-exec-9] com.shawf.aspect.LogAspect               : Request:RequestLog{url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.shawf.controller.IndexController.index', args=[Page request [number: 0, size 8, sort: lastUpdateTime: DESC], {}]}
+2020-08-17 16:14:58.198  INFO 6792 --- [http-nio-8080-exec-9] com.shawf.aspect.LogAspect               : Result:index
+2020-08-17 16:14:59.104  INFO 6792 --- [http-nio-8080-exec-10] com.shawf.aspect.LogAspect               : Request:RequestLog{url='http://127.0.0.1:8080/footer/newBlog', ip='127.0.0.1', classMethod='com.shawf.controller.IndexController.newBlogList', args=[{}]}
+2020-08-17 16:14:59.306  INFO 6792 --- [http-nio-8080-exec-10] com.shawf.aspect.LogAspect               : Result:_modes::newBlogList
+2020-08-17 16:16:58.111  INFO 6792 --- [http-nio-8080-exec-5] com.shawf.aspect.LogAspect               : Request:RequestLog{url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.shawf.controller.IndexController.index', args=[Page request [number: 0, size 8, sort: lastUpdateTime: DESC], {}]}
+2020-08-17 16:16:58.818  INFO 6792 --- [http-nio-8080-exec-5] com.shawf.aspect.LogAspect               : Result:index
+2020-08-17 16:16:59.461  INFO 6792 --- [http-nio-8080-exec-3] com.shawf.aspect.LogAspect               : Request:RequestLog{url='http://127.0.0.1:8080/footer/newBlog', ip='127.0.0.1', classMethod='com.shawf.controller.IndexController.newBlogList', args=[{}]}
+2020-08-17 16:16:59.711  INFO 6792 --- [http-nio-8080-exec-3] com.shawf.aspect.LogAspect               : Result:_modes::newBlogList
+2020-08-17 16:19:52.716  INFO 6792 --- [http-nio-8080-exec-10] com.shawf.aspect.LogAspect               : Request:RequestLog{url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.shawf.controller.IndexController.index', args=[Page request [number: 0, size 8, sort: lastUpdateTime: DESC], {}]}
+2020-08-17 16:19:53.432  INFO 6792 --- [http-nio-8080-exec-10] com.shawf.aspect.LogAspect               : Result:index
+2020-08-17 16:19:54.072  INFO 6792 --- [http-nio-8080-exec-8] com.shawf.aspect.LogAspect               : Request:RequestLog{url='http://127.0.0.1:8080/footer/newBlog', ip='127.0.0.1', classMethod='com.shawf.controller.IndexController.newBlogList', args=[{}]}
+2020-08-17 16:19:54.220  INFO 6792 --- [http-nio-8080-exec-8] com.shawf.aspect.LogAspect               : Result:_modes::newBlogList
+2020-08-17 16:20:22.804  INFO 6792 --- [http-nio-8080-exec-6] com.shawf.aspect.LogAspect               : Request:RequestLog{url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.shawf.controller.IndexController.index', args=[Page request [number: 0, size 8, sort: lastUpdateTime: DESC], {}]}
+2020-08-17 16:20:23.403  INFO 6792 --- [http-nio-8080-exec-6] com.shawf.aspect.LogAspect               : Result:index
+2020-08-17 16:20:23.966  INFO 6792 --- [http-nio-8080-exec-9] com.shawf.aspect.LogAspect               : Request:RequestLog{url='http://127.0.0.1:8080/footer/newBlog', ip='127.0.0.1', classMethod='com.shawf.controller.IndexController.newBlogList', args=[{}]}
+2020-08-17 16:20:24.123  INFO 6792 --- [http-nio-8080-exec-9] com.shawf.aspect.LogAspect               : Result:_modes::newBlogList
+2020-08-17 16:21:50.589  INFO 6792 --- [http-nio-8080-exec-8] com.shawf.aspect.LogAspect               : Request:RequestLog{url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.shawf.controller.IndexController.index', args=[Page request [number: 0, size 8, sort: lastUpdateTime: DESC], {}]}
+2020-08-17 16:21:51.294  INFO 6792 --- [http-nio-8080-exec-8] com.shawf.aspect.LogAspect               : Result:index
+2020-08-17 16:21:51.335 ERROR 6792 --- [http-nio-8080-exec-8] org.thymeleaf.TemplateEngine             : [THYMELEAF][http-nio-8080-exec-8] Exception processing template "index": An error happened during template parsing (template: "class path resource [templates/index.html]")
+
+org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "class path resource [templates/index.html]")
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:241)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:666)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072)
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:362)
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:189)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1373)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1118)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1057)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:526)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:861)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1579)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.attoparser.ParseException: An error happened during template parsing (template: "class path resource [templates/_modes.html]" - line 8, col 11)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:393)
+	at org.attoparser.MarkupParser.parse(MarkupParser.java:257)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230)
+	... 48 common frames omitted
+Caused by: org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "class path resource [templates/_modes.html]" - line 8, col 11)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:239)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100)
+	at org.thymeleaf.engine.TemplateManager.parseStandalone(TemplateManager.java:302)
+	at org.thymeleaf.standard.expression.FragmentExpression.resolveExecutedFragmentExpression(FragmentExpression.java:588)
+	at org.thymeleaf.standard.processor.AbstractStandardFragmentInsertionTagProcessor.computeFragment(AbstractStandardFragmentInsertionTagProcessor.java:379)
+	at org.thymeleaf.standard.processor.AbstractStandardFragmentInsertionTagProcessor.doProcess(AbstractStandardFragmentInsertionTagProcessor.java:110)
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74)
+	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95)
+	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633)
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleOpenElement(ProcessorTemplateHandler.java:1314)
+	at org.thymeleaf.engine.TemplateHandlerAdapterMarkupHandler.handleOpenElementEnd(TemplateHandlerAdapterMarkupHandler.java:304)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler$InlineMarkupAdapterPreProcessorHandler.handleOpenElementEnd(InlinedOutputExpressionMarkupHandler.java:278)
+	at org.thymeleaf.standard.inline.OutputExpressionInlinePreProcessorHandler.handleOpenElementEnd(OutputExpressionInlinePreProcessorHandler.java:186)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler.handleOpenElementEnd(InlinedOutputExpressionMarkupHandler.java:124)
+	at org.attoparser.HtmlElement.handleOpenElementEnd(HtmlElement.java:109)
+	at org.attoparser.HtmlMarkupHandler.handleOpenElementEnd(HtmlMarkupHandler.java:297)
+	at org.attoparser.MarkupEventProcessorHandler.handleOpenElementEnd(MarkupEventProcessorHandler.java:402)
+	at org.attoparser.ParsingElementMarkupUtil.parseOpenElement(ParsingElementMarkupUtil.java:159)
+	at org.attoparser.MarkupParser.parseBuffer(MarkupParser.java:710)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:301)
+	... 50 common frames omitted
+Caused by: org.attoparser.ParseException: (Line = 8, Column = 11) Malformed markup: Attribute "rel" appears more than once in element
+	at org.attoparser.MarkupEventProcessorHandler.handleAttribute(MarkupEventProcessorHandler.java:549)
+	at org.attoparser.ParsingAttributeSequenceUtil.parseAttributeSequence(ParsingAttributeSequenceUtil.java:300)
+	at org.attoparser.ParsingElementMarkupUtil.parseOpenElement(ParsingElementMarkupUtil.java:153)
+	at org.attoparser.MarkupParser.parseBuffer(MarkupParser.java:710)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:301)
+	at org.attoparser.MarkupParser.parse(MarkupParser.java:257)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230)
+	... 69 common frames omitted
+
+2020-08-17 16:21:51.350 ERROR 6792 --- [http-nio-8080-exec-8] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "class path resource [templates/index.html]")] with root cause
+
+org.attoparser.ParseException: (Line = 8, Column = 11) Malformed markup: Attribute "rel" appears more than once in element
+	at org.attoparser.MarkupEventProcessorHandler.handleAttribute(MarkupEventProcessorHandler.java:549)
+	at org.attoparser.ParsingAttributeSequenceUtil.parseAttributeSequence(ParsingAttributeSequenceUtil.java:300)
+	at org.attoparser.ParsingElementMarkupUtil.parseOpenElement(ParsingElementMarkupUtil.java:153)
+	at org.attoparser.MarkupParser.parseBuffer(MarkupParser.java:710)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:301)
+	at org.attoparser.MarkupParser.parse(MarkupParser.java:257)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100)
+	at org.thymeleaf.engine.TemplateManager.parseStandalone(TemplateManager.java:302)
+	at org.thymeleaf.standard.expression.FragmentExpression.resolveExecutedFragmentExpression(FragmentExpression.java:588)
+	at org.thymeleaf.standard.processor.AbstractStandardFragmentInsertionTagProcessor.computeFragment(AbstractStandardFragmentInsertionTagProcessor.java:379)
+	at org.thymeleaf.standard.processor.AbstractStandardFragmentInsertionTagProcessor.doProcess(AbstractStandardFragmentInsertionTagProcessor.java:110)
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74)
+	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95)
+	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633)
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleOpenElement(ProcessorTemplateHandler.java:1314)
+	at org.thymeleaf.engine.TemplateHandlerAdapterMarkupHandler.handleOpenElementEnd(TemplateHandlerAdapterMarkupHandler.java:304)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler$InlineMarkupAdapterPreProcessorHandler.handleOpenElementEnd(InlinedOutputExpressionMarkupHandler.java:278)
+	at org.thymeleaf.standard.inline.OutputExpressionInlinePreProcessorHandler.handleOpenElementEnd(OutputExpressionInlinePreProcessorHandler.java:186)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler.handleOpenElementEnd(InlinedOutputExpressionMarkupHandler.java:124)
+	at org.attoparser.HtmlElement.handleOpenElementEnd(HtmlElement.java:109)
+	at org.attoparser.HtmlMarkupHandler.handleOpenElementEnd(HtmlMarkupHandler.java:297)
+	at org.attoparser.MarkupEventProcessorHandler.handleOpenElementEnd(MarkupEventProcessorHandler.java:402)
+	at org.attoparser.ParsingElementMarkupUtil.parseOpenElement(ParsingElementMarkupUtil.java:159)
+	at org.attoparser.MarkupParser.parseBuffer(MarkupParser.java:710)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:301)
+	at org.attoparser.MarkupParser.parse(MarkupParser.java:257)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:666)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072)
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:362)
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:189)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1373)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1118)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1057)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:526)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:861)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1579)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-08-17 16:21:51.374 ERROR 6792 --- [http-nio-8080-exec-8] org.thymeleaf.TemplateEngine             : [THYMELEAF][http-nio-8080-exec-8] Exception processing template "error/500": An error happened during template parsing (template: "class path resource [templates/error/500.html]")
+
+org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "class path resource [templates/error/500.html]")
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:241)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:666)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072)
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:362)
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:189)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1373)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1118)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1057)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:712)
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:461)
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:384)
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:312)
+	at org.apache.catalina.core.StandardHostValve.custom(StandardHostValve.java:394)
+	at org.apache.catalina.core.StandardHostValve.status(StandardHostValve.java:253)
+	at org.apache.catalina.core.StandardHostValve.throwable(StandardHostValve.java:348)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:173)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:861)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1579)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.attoparser.ParseException: An error happened during template parsing (template: "class path resource [templates/_modes.html]" - line 8, col 11)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:393)
+	at org.attoparser.MarkupParser.parse(MarkupParser.java:257)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230)
+	... 37 common frames omitted
+Caused by: org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "class path resource [templates/_modes.html]" - line 8, col 11)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:239)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100)
+	at org.thymeleaf.engine.TemplateManager.parseStandalone(TemplateManager.java:302)
+	at org.thymeleaf.standard.expression.FragmentExpression.resolveExecutedFragmentExpression(FragmentExpression.java:588)
+	at org.thymeleaf.standard.processor.AbstractStandardFragmentInsertionTagProcessor.computeFragment(AbstractStandardFragmentInsertionTagProcessor.java:379)
+	at org.thymeleaf.standard.processor.AbstractStandardFragmentInsertionTagProcessor.doProcess(AbstractStandardFragmentInsertionTagProcessor.java:110)
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74)
+	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95)
+	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633)
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleOpenElement(ProcessorTemplateHandler.java:1314)
+	at org.thymeleaf.engine.TemplateHandlerAdapterMarkupHandler.handleOpenElementEnd(TemplateHandlerAdapterMarkupHandler.java:304)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler$InlineMarkupAdapterPreProcessorHandler.handleOpenElementEnd(InlinedOutputExpressionMarkupHandler.java:278)
+	at org.thymeleaf.standard.inline.OutputExpressionInlinePreProcessorHandler.handleOpenElementEnd(OutputExpressionInlinePreProcessorHandler.java:186)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler.handleOpenElementEnd(InlinedOutputExpressionMarkupHandler.java:124)
+	at org.attoparser.HtmlElement.handleOpenElementEnd(HtmlElement.java:109)
+	at org.attoparser.HtmlMarkupHandler.handleOpenElementEnd(HtmlMarkupHandler.java:297)
+	at org.attoparser.MarkupEventProcessorHandler.handleOpenElementEnd(MarkupEventProcessorHandler.java:402)
+	at org.attoparser.ParsingElementMarkupUtil.parseOpenElement(ParsingElementMarkupUtil.java:159)
+	at org.attoparser.MarkupParser.parseBuffer(MarkupParser.java:710)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:301)
+	... 39 common frames omitted
+Caused by: org.attoparser.ParseException: (Line = 8, Column = 11) Malformed markup: Attribute "rel" appears more than once in element
+	at org.attoparser.MarkupEventProcessorHandler.handleAttribute(MarkupEventProcessorHandler.java:549)
+	at org.attoparser.ParsingAttributeSequenceUtil.parseAttributeSequence(ParsingAttributeSequenceUtil.java:300)
+	at org.attoparser.ParsingElementMarkupUtil.parseOpenElement(ParsingElementMarkupUtil.java:153)
+	at org.attoparser.MarkupParser.parseBuffer(MarkupParser.java:710)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:301)
+	at org.attoparser.MarkupParser.parse(MarkupParser.java:257)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230)
+	... 58 common frames omitted
+
+2020-08-17 16:21:51.379 ERROR 6792 --- [http-nio-8080-exec-8] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] threw exception
+
+org.attoparser.ParseException: (Line = 8, Column = 11) Malformed markup: Attribute "rel" appears more than once in element
+	at org.attoparser.MarkupEventProcessorHandler.handleAttribute(MarkupEventProcessorHandler.java:549)
+	at org.attoparser.ParsingAttributeSequenceUtil.parseAttributeSequence(ParsingAttributeSequenceUtil.java:300)
+	at org.attoparser.ParsingElementMarkupUtil.parseOpenElement(ParsingElementMarkupUtil.java:153)
+	at org.attoparser.MarkupParser.parseBuffer(MarkupParser.java:710)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:301)
+	at org.attoparser.MarkupParser.parse(MarkupParser.java:257)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100)
+	at org.thymeleaf.engine.TemplateManager.parseStandalone(TemplateManager.java:302)
+	at org.thymeleaf.standard.expression.FragmentExpression.resolveExecutedFragmentExpression(FragmentExpression.java:588)
+	at org.thymeleaf.standard.processor.AbstractStandardFragmentInsertionTagProcessor.computeFragment(AbstractStandardFragmentInsertionTagProcessor.java:379)
+	at org.thymeleaf.standard.processor.AbstractStandardFragmentInsertionTagProcessor.doProcess(AbstractStandardFragmentInsertionTagProcessor.java:110)
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74)
+	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95)
+	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633)
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleOpenElement(ProcessorTemplateHandler.java:1314)
+	at org.thymeleaf.engine.TemplateHandlerAdapterMarkupHandler.handleOpenElementEnd(TemplateHandlerAdapterMarkupHandler.java:304)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler$InlineMarkupAdapterPreProcessorHandler.handleOpenElementEnd(InlinedOutputExpressionMarkupHandler.java:278)
+	at org.thymeleaf.standard.inline.OutputExpressionInlinePreProcessorHandler.handleOpenElementEnd(OutputExpressionInlinePreProcessorHandler.java:186)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler.handleOpenElementEnd(InlinedOutputExpressionMarkupHandler.java:124)
+	at org.attoparser.HtmlElement.handleOpenElementEnd(HtmlElement.java:109)
+	at org.attoparser.HtmlMarkupHandler.handleOpenElementEnd(HtmlMarkupHandler.java:297)
+	at org.attoparser.MarkupEventProcessorHandler.handleOpenElementEnd(MarkupEventProcessorHandler.java:402)
+	at org.attoparser.ParsingElementMarkupUtil.parseOpenElement(ParsingElementMarkupUtil.java:159)
+	at org.attoparser.MarkupParser.parseBuffer(MarkupParser.java:710)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:301)
+	at org.attoparser.MarkupParser.parse(MarkupParser.java:257)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:666)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072)
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:362)
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:189)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1373)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1118)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1057)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:712)
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:461)
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:384)
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:312)
+	at org.apache.catalina.core.StandardHostValve.custom(StandardHostValve.java:394)
+	at org.apache.catalina.core.StandardHostValve.status(StandardHostValve.java:253)
+	at org.apache.catalina.core.StandardHostValve.throwable(StandardHostValve.java:348)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:173)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:861)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1579)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-08-17 16:21:51.382 ERROR 6792 --- [http-nio-8080-exec-8] o.a.c.c.C.[Tomcat].[localhost]           : Exception Processing ErrorPage[errorCode=0, location=/error]
+
+org.springframework.web.util.NestedServletException: Request processing failed; nested exception is org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "class path resource [templates/error/500.html]")
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:712)
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:461)
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:384)
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:312)
+	at org.apache.catalina.core.StandardHostValve.custom(StandardHostValve.java:394)
+	at org.apache.catalina.core.StandardHostValve.status(StandardHostValve.java:253)
+	at org.apache.catalina.core.StandardHostValve.throwable(StandardHostValve.java:348)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:173)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:861)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1579)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "class path resource [templates/error/500.html]")
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:241)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:666)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072)
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:362)
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:189)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1373)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1118)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1057)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	... 26 common frames omitted
+Caused by: org.attoparser.ParseException: An error happened during template parsing (template: "class path resource [templates/_modes.html]" - line 8, col 11)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:393)
+	at org.attoparser.MarkupParser.parse(MarkupParser.java:257)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230)
+	... 37 common frames omitted
+Caused by: org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "class path resource [templates/_modes.html]" - line 8, col 11)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:239)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100)
+	at org.thymeleaf.engine.TemplateManager.parseStandalone(TemplateManager.java:302)
+	at org.thymeleaf.standard.expression.FragmentExpression.resolveExecutedFragmentExpression(FragmentExpression.java:588)
+	at org.thymeleaf.standard.processor.AbstractStandardFragmentInsertionTagProcessor.computeFragment(AbstractStandardFragmentInsertionTagProcessor.java:379)
+	at org.thymeleaf.standard.processor.AbstractStandardFragmentInsertionTagProcessor.doProcess(AbstractStandardFragmentInsertionTagProcessor.java:110)
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74)
+	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95)
+	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633)
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleOpenElement(ProcessorTemplateHandler.java:1314)
+	at org.thymeleaf.engine.TemplateHandlerAdapterMarkupHandler.handleOpenElementEnd(TemplateHandlerAdapterMarkupHandler.java:304)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler$InlineMarkupAdapterPreProcessorHandler.handleOpenElementEnd(InlinedOutputExpressionMarkupHandler.java:278)
+	at org.thymeleaf.standard.inline.OutputExpressionInlinePreProcessorHandler.handleOpenElementEnd(OutputExpressionInlinePreProcessorHandler.java:186)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler.handleOpenElementEnd(InlinedOutputExpressionMarkupHandler.java:124)
+	at org.attoparser.HtmlElement.handleOpenElementEnd(HtmlElement.java:109)
+	at org.attoparser.HtmlMarkupHandler.handleOpenElementEnd(HtmlMarkupHandler.java:297)
+	at org.attoparser.MarkupEventProcessorHandler.handleOpenElementEnd(MarkupEventProcessorHandler.java:402)
+	at org.attoparser.ParsingElementMarkupUtil.parseOpenElement(ParsingElementMarkupUtil.java:159)
+	at org.attoparser.MarkupParser.parseBuffer(MarkupParser.java:710)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:301)
+	... 39 common frames omitted
+Caused by: org.attoparser.ParseException: (Line = 8, Column = 11) Malformed markup: Attribute "rel" appears more than once in element
+	at org.attoparser.MarkupEventProcessorHandler.handleAttribute(MarkupEventProcessorHandler.java:549)
+	at org.attoparser.ParsingAttributeSequenceUtil.parseAttributeSequence(ParsingAttributeSequenceUtil.java:300)
+	at org.attoparser.ParsingElementMarkupUtil.parseOpenElement(ParsingElementMarkupUtil.java:153)
+	at org.attoparser.MarkupParser.parseBuffer(MarkupParser.java:710)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:301)
+	at org.attoparser.MarkupParser.parse(MarkupParser.java:257)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230)
+	... 58 common frames omitted
+
+2020-08-17 16:22:10.396  INFO 6792 --- [http-nio-8080-exec-3] com.shawf.aspect.LogAspect               : Request:RequestLog{url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.shawf.controller.IndexController.index', args=[Page request [number: 0, size 8, sort: lastUpdateTime: DESC], {}]}
+2020-08-17 16:22:10.906  INFO 6792 --- [http-nio-8080-exec-3] com.shawf.aspect.LogAspect               : Result:index
+2020-08-17 16:22:11.644  INFO 6792 --- [http-nio-8080-exec-7] com.shawf.aspect.LogAspect               : Request:RequestLog{url='http://127.0.0.1:8080/footer/newBlog', ip='127.0.0.1', classMethod='com.shawf.controller.IndexController.newBlogList', args=[{}]}
+2020-08-17 16:22:11.799  INFO 6792 --- [http-nio-8080-exec-7] com.shawf.aspect.LogAspect               : Result:_modes::newBlogList
+2020-08-17 16:23:01.263  INFO 6792 --- [http-nio-8080-exec-4] com.shawf.aspect.LogAspect               : Request:RequestLog{url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.shawf.controller.IndexController.index', args=[Page request [number: 0, size 8, sort: lastUpdateTime: DESC], {}]}
+2020-08-17 16:23:01.798  INFO 6792 --- [http-nio-8080-exec-4] com.shawf.aspect.LogAspect               : Result:index
+2020-08-17 16:23:02.557  INFO 6792 --- [http-nio-8080-exec-5] com.shawf.aspect.LogAspect               : Request:RequestLog{url='http://127.0.0.1:8080/footer/newBlog', ip='127.0.0.1', classMethod='com.shawf.controller.IndexController.newBlogList', args=[{}]}
+2020-08-17 16:23:02.709  INFO 6792 --- [http-nio-8080-exec-5] com.shawf.aspect.LogAspect               : Result:_modes::newBlogList
+2020-08-17 16:47:37.066  INFO 6792 --- [http-nio-8080-exec-2] com.shawf.aspect.LogAspect               : Request:RequestLog{url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.shawf.controller.IndexController.index', args=[Page request [number: 0, size 8, sort: lastUpdateTime: DESC], {}]}
+2020-08-17 16:47:37.738  INFO 6792 --- [http-nio-8080-exec-2] com.shawf.aspect.LogAspect               : Result:index
+2020-08-17 16:47:38.336  INFO 6792 --- [http-nio-8080-exec-4] com.shawf.aspect.LogAspect               : Request:RequestLog{url='http://127.0.0.1:8080/footer/newBlog', ip='127.0.0.1', classMethod='com.shawf.controller.IndexController.newBlogList', args=[{}]}
+2020-08-17 16:47:38.465  INFO 6792 --- [http-nio-8080-exec-4] com.shawf.aspect.LogAspect               : Result:_modes::newBlogList
+2020-08-17 16:47:50.810  INFO 6792 --- [http-nio-8080-exec-10] com.shawf.aspect.LogAspect               : Request:RequestLog{url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.shawf.controller.IndexController.index', args=[Page request [number: 0, size 8, sort: lastUpdateTime: DESC], {}]}
+2020-08-17 16:47:51.493  INFO 6792 --- [http-nio-8080-exec-10] com.shawf.aspect.LogAspect               : Result:index
+2020-08-17 16:47:52.140  INFO 6792 --- [http-nio-8080-exec-5] com.shawf.aspect.LogAspect               : Request:RequestLog{url='http://127.0.0.1:8080/footer/newBlog', ip='127.0.0.1', classMethod='com.shawf.controller.IndexController.newBlogList', args=[{}]}
+2020-08-17 16:47:52.301  INFO 6792 --- [http-nio-8080-exec-5] com.shawf.aspect.LogAspect               : Result:_modes::newBlogList
+2020-08-17 16:47:57.877  INFO 6792 --- [http-nio-8080-exec-9] com.shawf.aspect.LogAspect               : Request:RequestLog{url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.shawf.controller.IndexController.index', args=[Page request [number: 0, size 8, sort: lastUpdateTime: DESC], {}]}
+2020-08-17 16:47:58.634  INFO 6792 --- [http-nio-8080-exec-9] com.shawf.aspect.LogAspect               : Result:index
+2020-08-17 16:47:59.535  INFO 6792 --- [http-nio-8080-exec-10] com.shawf.aspect.LogAspect               : Request:RequestLog{url='http://127.0.0.1:8080/footer/newBlog', ip='127.0.0.1', classMethod='com.shawf.controller.IndexController.newBlogList', args=[{}]}
+2020-08-17 16:47:59.692  INFO 6792 --- [http-nio-8080-exec-10] com.shawf.aspect.LogAspect               : Result:_modes::newBlogList
+2020-08-17 16:48:59.430  INFO 6792 --- [http-nio-8080-exec-2] com.shawf.aspect.LogAspect               : Request:RequestLog{url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.shawf.controller.IndexController.index', args=[Page request [number: 0, size 8, sort: lastUpdateTime: DESC], {}]}
+2020-08-17 16:49:00.151  INFO 6792 --- [http-nio-8080-exec-2] com.shawf.aspect.LogAspect               : Result:index
+2020-08-17 16:49:00.738  INFO 6792 --- [http-nio-8080-exec-6] com.shawf.aspect.LogAspect               : Request:RequestLog{url='http://127.0.0.1:8080/footer/newBlog', ip='127.0.0.1', classMethod='com.shawf.controller.IndexController.newBlogList', args=[{}]}
+2020-08-17 16:49:00.865  INFO 6792 --- [http-nio-8080-exec-6] com.shawf.aspect.LogAspect               : Result:_modes::newBlogList
+2020-08-17 16:49:24.268  INFO 6792 --- [http-nio-8080-exec-10] com.shawf.aspect.LogAspect               : Request:RequestLog{url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.shawf.controller.IndexController.index', args=[Page request [number: 0, size 8, sort: lastUpdateTime: DESC], {}]}
+2020-08-17 16:49:24.956  INFO 6792 --- [http-nio-8080-exec-10] com.shawf.aspect.LogAspect               : Result:index
+2020-08-17 16:49:25.533  INFO 6792 --- [http-nio-8080-exec-7] com.shawf.aspect.LogAspect               : Request:RequestLog{url='http://127.0.0.1:8080/footer/newBlog', ip='127.0.0.1', classMethod='com.shawf.controller.IndexController.newBlogList', args=[{}]}
+2020-08-17 16:49:25.691  INFO 6792 --- [http-nio-8080-exec-7] com.shawf.aspect.LogAspect               : Result:_modes::newBlogList
+2020-08-17 16:49:34.910  INFO 6792 --- [http-nio-8080-exec-9] com.shawf.aspect.LogAspect               : Request:RequestLog{url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.shawf.controller.IndexController.index', args=[Page request [number: 0, size 8, sort: lastUpdateTime: DESC], {}]}
+2020-08-17 16:49:35.560  INFO 6792 --- [http-nio-8080-exec-9] com.shawf.aspect.LogAspect               : Result:index
+2020-08-17 16:49:36.117  INFO 6792 --- [http-nio-8080-exec-10] com.shawf.aspect.LogAspect               : Request:RequestLog{url='http://127.0.0.1:8080/footer/newBlog', ip='127.0.0.1', classMethod='com.shawf.controller.IndexController.newBlogList', args=[{}]}
+2020-08-17 16:49:36.280  INFO 6792 --- [http-nio-8080-exec-10] com.shawf.aspect.LogAspect               : Result:_modes::newBlogList
+2020-08-17 16:49:57.180  INFO 6792 --- [http-nio-8080-exec-5] com.shawf.aspect.LogAspect               : Request:RequestLog{url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.shawf.controller.IndexController.index', args=[Page request [number: 0, size 8, sort: lastUpdateTime: DESC], {}]}
+2020-08-17 16:49:57.971  INFO 6792 --- [http-nio-8080-exec-5] com.shawf.aspect.LogAspect               : Result:index
+2020-08-17 16:49:58.611  INFO 6792 --- [http-nio-8080-exec-3] com.shawf.aspect.LogAspect               : Request:RequestLog{url='http://127.0.0.1:8080/footer/newBlog', ip='127.0.0.1', classMethod='com.shawf.controller.IndexController.newBlogList', args=[{}]}
+2020-08-17 16:49:58.851  INFO 6792 --- [http-nio-8080-exec-3] com.shawf.aspect.LogAspect               : Result:_modes::newBlogList
+2020-08-17 16:56:33.734  INFO 6792 --- [http-nio-8080-exec-3] com.shawf.aspect.LogAspect               : Request:RequestLog{url='http://127.0.0.1:8080/archive', ip='127.0.0.1', classMethod='com.shawf.controller.ArchiveController.archive', args=[{}]}
+2020-08-17 16:56:33.749  WARN 6792 --- [http-nio-8080-exec-3] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@5f8b33d3 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-08-17 16:56:33.752  WARN 6792 --- [http-nio-8080-exec-3] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@3791b7cf (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-08-17 16:56:33.753  WARN 6792 --- [http-nio-8080-exec-3] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@585e585d (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-08-17 16:56:33.754  WARN 6792 --- [http-nio-8080-exec-3] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@4df8348e (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-08-17 16:56:33.755  WARN 6792 --- [http-nio-8080-exec-3] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@4697d32a (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-08-17 16:56:33.756  WARN 6792 --- [http-nio-8080-exec-3] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@5360b4f5 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-08-17 16:56:33.757  WARN 6792 --- [http-nio-8080-exec-3] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@48466c8f (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-08-17 16:56:33.758  WARN 6792 --- [http-nio-8080-exec-3] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@4403cd0a (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-08-17 16:56:33.759  WARN 6792 --- [http-nio-8080-exec-3] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@8648331 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-08-17 16:56:33.760  WARN 6792 --- [http-nio-8080-exec-3] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@50604e4d (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-08-17 16:56:35.035  INFO 6792 --- [http-nio-8080-exec-3] com.shawf.aspect.LogAspect               : Result:archives
+2020-08-17 16:56:35.421  INFO 6792 --- [http-nio-8080-exec-10] com.shawf.aspect.LogAspect               : Request:RequestLog{url='http://127.0.0.1:8080/footer/newBlog', ip='127.0.0.1', classMethod='com.shawf.controller.IndexController.newBlogList', args=[{}]}
+2020-08-17 16:56:35.845  INFO 6792 --- [http-nio-8080-exec-2] com.shawf.aspect.LogAspect               : Request:RequestLog{url='http://127.0.0.1:8080/me', ip='127.0.0.1', classMethod='com.shawf.controller.MeController.me', args=[]}
+2020-08-17 16:56:35.845  INFO 6792 --- [http-nio-8080-exec-2] com.shawf.aspect.LogAspect               : Result:me
+2020-08-17 16:56:35.894  INFO 6792 --- [http-nio-8080-exec-10] com.shawf.aspect.LogAspect               : Result:_modes::newBlogList
+2020-08-17 16:56:36.128  INFO 6792 --- [http-nio-8080-exec-5] com.shawf.aspect.LogAspect               : Request:RequestLog{url='http://127.0.0.1:8080/footer/newBlog', ip='127.0.0.1', classMethod='com.shawf.controller.IndexController.newBlogList', args=[{}]}
+2020-08-17 16:56:36.377  INFO 6792 --- [http-nio-8080-exec-5] com.shawf.aspect.LogAspect               : Result:_modes::newBlogList
+2020-08-17 16:56:36.963  INFO 6792 --- [http-nio-8080-exec-4] com.shawf.aspect.LogAspect               : Request:RequestLog{url='http://127.0.0.1:8080/archive', ip='127.0.0.1', classMethod='com.shawf.controller.ArchiveController.archive', args=[{}]}
+2020-08-17 16:56:37.494  INFO 6792 --- [http-nio-8080-exec-4] com.shawf.aspect.LogAspect               : Result:archives
+2020-08-17 16:56:37.780  INFO 6792 --- [http-nio-8080-exec-2] com.shawf.aspect.LogAspect               : Request:RequestLog{url='http://127.0.0.1:8080/footer/newBlog', ip='127.0.0.1', classMethod='com.shawf.controller.IndexController.newBlogList', args=[{}]}
+2020-08-17 16:56:37.912  INFO 6792 --- [http-nio-8080-exec-2] com.shawf.aspect.LogAspect               : Result:_modes::newBlogList
+2020-08-17 16:56:38.247  INFO 6792 --- [http-nio-8080-exec-6] com.shawf.aspect.LogAspect               : Request:RequestLog{url='http://127.0.0.1:8080/tag/-1', ip='127.0.0.1', classMethod='com.shawf.controller.ListTagController.tag', args=[Page request [number: 0, size 8, sort: lastUpdateTime: DESC], -1, {}]}
+2020-08-17 16:56:38.783  INFO 6792 --- [http-nio-8080-exec-6] com.shawf.aspect.LogAspect               : Result:tags
+2020-08-17 16:56:39.249  INFO 6792 --- [http-nio-8080-exec-4] com.shawf.aspect.LogAspect               : Request:RequestLog{url='http://127.0.0.1:8080/footer/newBlog', ip='127.0.0.1', classMethod='com.shawf.controller.IndexController.newBlogList', args=[{}]}
+2020-08-17 16:56:39.415  INFO 6792 --- [http-nio-8080-exec-4] com.shawf.aspect.LogAspect               : Result:_modes::newBlogList
+2020-08-17 16:56:40.198  INFO 6792 --- [http-nio-8080-exec-1] com.shawf.aspect.LogAspect               : Request:RequestLog{url='http://127.0.0.1:8080/type/-1', ip='127.0.0.1', classMethod='com.shawf.controller.ListTypeController.type', args=[Page request [number: 0, size 8, sort: lastUpdateTime: DESC], -1, {}]}
+2020-08-17 16:56:40.585  INFO 6792 --- [http-nio-8080-exec-1] com.shawf.aspect.LogAspect               : Result:types
+2020-08-17 16:56:41.119  INFO 6792 --- [http-nio-8080-exec-9] com.shawf.aspect.LogAspect               : Request:RequestLog{url='http://127.0.0.1:8080/footer/newBlog', ip='127.0.0.1', classMethod='com.shawf.controller.IndexController.newBlogList', args=[{}]}
+2020-08-17 16:56:41.267  INFO 6792 --- [http-nio-8080-exec-9] com.shawf.aspect.LogAspect               : Result:_modes::newBlogList
+2020-08-17 17:00:31.933  INFO 6792 --- [http-nio-8080-exec-1] com.shawf.aspect.LogAspect               : Request:RequestLog{url='http://127.0.0.1:8080/search', ip='127.0.0.1', classMethod='com.shawf.controller.IndexController.search', args=[Page request [number: 0, size 8, sort: lastUpdateTime: DESC], , {}]}
+2020-08-17 17:00:31.937  WARN 6792 --- [http-nio-8080-exec-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@30188717 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-08-17 17:00:31.940  WARN 6792 --- [http-nio-8080-exec-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@7136b26f (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-08-17 17:00:31.942  WARN 6792 --- [http-nio-8080-exec-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@4c56956a (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-08-17 17:00:31.943  WARN 6792 --- [http-nio-8080-exec-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@5f736029 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-08-17 17:00:31.944  WARN 6792 --- [http-nio-8080-exec-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@5538e323 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-08-17 17:00:31.945  WARN 6792 --- [http-nio-8080-exec-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@1af0a1cf (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-08-17 17:00:31.946  WARN 6792 --- [http-nio-8080-exec-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@4b4ca9cb (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-08-17 17:00:31.947  WARN 6792 --- [http-nio-8080-exec-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@3d8205be (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-08-17 17:00:31.948  WARN 6792 --- [http-nio-8080-exec-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@313244f3 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-08-17 17:00:31.949  WARN 6792 --- [http-nio-8080-exec-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@275fcb27 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-08-17 17:00:33.517  INFO 6792 --- [http-nio-8080-exec-1] com.shawf.aspect.LogAspect               : Result:search
+2020-08-17 17:00:33.875  INFO 6792 --- [http-nio-8080-exec-8] com.shawf.aspect.LogAspect               : Request:RequestLog{url='http://127.0.0.1:8080/footer/newBlog', ip='127.0.0.1', classMethod='com.shawf.controller.IndexController.newBlogList', args=[{}]}
+2020-08-17 17:00:34.340  INFO 6792 --- [http-nio-8080-exec-8] com.shawf.aspect.LogAspect               : Result:_modes::newBlogList
+2020-08-17 17:09:36.475  INFO 6792 --- [http-nio-8080-exec-3] com.shawf.aspect.LogAspect               : Request:RequestLog{url='http://127.0.0.1:8080/type/-1', ip='127.0.0.1', classMethod='com.shawf.controller.ListTypeController.type', args=[Page request [number: 0, size 8, sort: lastUpdateTime: DESC], -1, {}]}
+2020-08-17 17:09:36.477  WARN 6792 --- [http-nio-8080-exec-3] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@1e13b48e (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-08-17 17:09:36.479  WARN 6792 --- [http-nio-8080-exec-3] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@3f18ee9e (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-08-17 17:09:36.483  WARN 6792 --- [http-nio-8080-exec-3] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@542c02be (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-08-17 17:09:36.485  WARN 6792 --- [http-nio-8080-exec-3] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@46d2ef82 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-08-17 17:09:36.486  WARN 6792 --- [http-nio-8080-exec-3] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@2a7a60cf (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-08-17 17:09:36.488  WARN 6792 --- [http-nio-8080-exec-3] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@719fea71 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-08-17 17:09:36.489  WARN 6792 --- [http-nio-8080-exec-3] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@2b0cefc9 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-08-17 17:09:36.491  WARN 6792 --- [http-nio-8080-exec-3] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@73e2c2 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-08-17 17:09:36.493  WARN 6792 --- [http-nio-8080-exec-3] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@52d0ced9 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-08-17 17:09:36.494  WARN 6792 --- [http-nio-8080-exec-3] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@49f76500 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-08-17 17:09:38.287  INFO 6792 --- [http-nio-8080-exec-3] com.shawf.aspect.LogAspect               : Result:types
+2020-08-17 17:09:39.152  INFO 6792 --- [http-nio-8080-exec-8] com.shawf.aspect.LogAspect               : Request:RequestLog{url='http://127.0.0.1:8080/footer/newBlog', ip='127.0.0.1', classMethod='com.shawf.controller.IndexController.newBlogList', args=[{}]}
+2020-08-17 17:09:39.353  INFO 6792 --- [http-nio-8080-exec-8] com.shawf.aspect.LogAspect               : Result:_modes::newBlogList
+2020-08-17 17:30:21.521  WARN 6792 --- [http-nio-8080-exec-2] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@7017dddf (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-08-17 17:30:21.523  WARN 6792 --- [http-nio-8080-exec-2] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@1e968059 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-08-17 17:30:21.525  WARN 6792 --- [http-nio-8080-exec-2] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@50581841 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-08-17 17:30:21.527  WARN 6792 --- [http-nio-8080-exec-2] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@3089523e (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-08-17 17:30:21.529  WARN 6792 --- [http-nio-8080-exec-2] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@7a835e89 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-08-17 17:30:21.530  WARN 6792 --- [http-nio-8080-exec-2] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@269be976 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-08-17 17:30:21.531  WARN 6792 --- [http-nio-8080-exec-2] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@626d58fd (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-08-17 17:30:21.532  WARN 6792 --- [http-nio-8080-exec-2] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@de80902 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-08-17 17:30:21.533  WARN 6792 --- [http-nio-8080-exec-2] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@56aa6b4f (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-08-17 17:30:21.534  WARN 6792 --- [http-nio-8080-exec-2] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@630b4f5e (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-08-17 17:31:10.142  INFO 6792 --- [http-nio-8080-exec-2] com.shawf.aspect.LogAspect               : Request:RequestLog{url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.shawf.controller.IndexController.index', args=[Page request [number: 0, size 8, sort: lastUpdateTime: DESC], {}]}
+2020-08-17 17:31:10.769  INFO 6792 --- [http-nio-8080-exec-2] com.shawf.aspect.LogAspect               : Result:index
+2020-08-17 17:31:11.274  INFO 6792 --- [http-nio-8080-exec-1] com.shawf.aspect.LogAspect               : Request:RequestLog{url='http://127.0.0.1:8080/footer/newBlog', ip='127.0.0.1', classMethod='com.shawf.controller.IndexController.newBlogList', args=[{}]}
+2020-08-17 17:31:11.417  INFO 6792 --- [http-nio-8080-exec-1] com.shawf.aspect.LogAspect               : Result:_modes::newBlogList
+2020-08-17 17:31:12.642  INFO 6792 --- [http-nio-8080-exec-9] com.shawf.aspect.LogAspect               : Request:RequestLog{url='http://127.0.0.1:8080/blog/51', ip='127.0.0.1', classMethod='com.shawf.controller.IndexController.blog', args=[51, {}]}
+2020-08-17 17:31:13.016  INFO 6792 --- [http-nio-8080-exec-9] com.shawf.aspect.LogAspect               : Result:blog
+2020-08-17 17:31:13.237  INFO 6792 --- [http-nio-8080-exec-10] com.shawf.aspect.LogAspect               : Request:RequestLog{url='http://127.0.0.1:8080/blog/1', ip='127.0.0.1', classMethod='com.shawf.controller.IndexController.blog', args=[1, {}]}
+2020-08-17 17:31:13.500  INFO 6792 --- [http-nio-8080-exec-6] com.shawf.aspect.LogAspect               : Request:RequestLog{url='http://127.0.0.1:8080/footer/newBlog', ip='127.0.0.1', classMethod='com.shawf.controller.IndexController.newBlogList', args=[{}]}
+2020-08-17 17:31:13.537 ERROR 6792 --- [http-nio-8080-exec-10] c.s.handler.ControllerExceptionHandler   : Request URL:http://127.0.0.1:8080/blog/1,Exception:{}
+
+org.springframework.beans.FatalBeanException: Could not copy property 'appreciateFlag' from source to target; nested exception is java.lang.reflect.InvocationTargetException
+	at org.springframework.beans.BeanUtils.copyProperties(BeanUtils.java:727)
+	at org.springframework.beans.BeanUtils.copyProperties(BeanUtils.java:639)
+	at com.shawf.service.impl.BlogServiceImpl.getBlogHtml(BlogServiceImpl.java:48)
+	at com.shawf.service.impl.BlogServiceImpl$$FastClassBySpringCGLIB$$b59eab3e.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:769)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:747)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:366)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:99)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:747)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:689)
+	at com.shawf.service.impl.BlogServiceImpl$$EnhancerBySpringCGLIB$$433703b6.getBlogHtml(<generated>)
+	at com.shawf.controller.IndexController.blog(IndexController.java:60)
+	at com.shawf.controller.IndexController$$FastClassBySpringCGLIB$$a518c3bc.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:769)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:747)
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:56)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:747)
+	at org.springframework.aop.aspectj.AspectJAfterAdvice.invoke(AspectJAfterAdvice.java:47)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:747)
+	at org.springframework.aop.framework.adapter.AfterReturningAdviceInterceptor.invoke(AfterReturningAdviceInterceptor.java:55)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:747)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:93)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:747)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:689)
+	at com.shawf.controller.IndexController$$EnhancerBySpringCGLIB$$56746e6f.blog(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:888)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:526)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:861)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1579)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.reflect.InvocationTargetException: null
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.BeanUtils.copyProperties(BeanUtils.java:719)
+	... 83 common frames omitted
+Caused by: javax.persistence.EntityNotFoundException: Unable to find com.shawf.entity.Blog with id 1
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl$JpaEntityNotFoundDelegate.handleEntityNotFound(EntityManagerFactoryBuilderImpl.java:163)
+	at org.hibernate.proxy.AbstractLazyInitializer.checkTargetState(AbstractLazyInitializer.java:286)
+	at org.hibernate.proxy.AbstractLazyInitializer.initialize(AbstractLazyInitializer.java:181)
+	at org.hibernate.proxy.AbstractLazyInitializer.getImplementation(AbstractLazyInitializer.java:310)
+	at org.hibernate.proxy.pojo.bytebuddy.ByteBuddyInterceptor.intercept(ByteBuddyInterceptor.java:45)
+	at org.hibernate.proxy.ProxyConfiguration$InterceptorDispatcher.intercept(ProxyConfiguration.java:95)
+	at com.shawf.entity.Blog$HibernateProxy$OIVHa9Uo.getAppreciateFlag(Unknown Source)
+	... 88 common frames omitted
+
+2020-08-17 17:31:13.541  WARN 6792 --- [http-nio-8080-exec-10] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.beans.FatalBeanException: Could not copy property 'appreciateFlag' from source to target; nested exception is java.lang.reflect.InvocationTargetException]
+2020-08-17 17:31:13.726  INFO 6792 --- [http-nio-8080-exec-6] com.shawf.aspect.LogAspect               : Result:_modes::newBlogList
+2020-08-17 17:31:20.418  INFO 6792 --- [http-nio-8080-exec-7] com.shawf.aspect.LogAspect               : Request:RequestLog{url='http://127.0.0.1:8080/blog/49', ip='127.0.0.1', classMethod='com.shawf.controller.IndexController.blog', args=[49, {}]}
+2020-08-17 17:31:20.714  INFO 6792 --- [http-nio-8080-exec-7] com.shawf.aspect.LogAspect               : Result:blog
+2020-08-17 17:31:21.093  INFO 6792 --- [http-nio-8080-exec-1] com.shawf.aspect.LogAspect               : Request:RequestLog{url='http://127.0.0.1:8080/footer/newBlog', ip='127.0.0.1', classMethod='com.shawf.controller.IndexController.newBlogList', args=[{}]}
+2020-08-17 17:31:21.175  INFO 6792 --- [http-nio-8080-exec-5] com.shawf.aspect.LogAspect               : Request:RequestLog{url='http://127.0.0.1:8080/comments/49', ip='127.0.0.1', classMethod='com.shawf.controller.CommentController.getComments', args=[49, {}]}
+2020-08-17 17:31:21.250  INFO 6792 --- [http-nio-8080-exec-1] com.shawf.aspect.LogAspect               : Result:_modes::newBlogList
+2020-08-17 17:31:21.433  INFO 6792 --- [http-nio-8080-exec-5] com.shawf.aspect.LogAspect               : Result:blog::commentList
+2020-08-17 17:31:29.687  INFO 6792 --- [http-nio-8080-exec-2] com.shawf.aspect.LogAspect               : Request:RequestLog{url='http://127.0.0.1:8080/blog/32', ip='127.0.0.1', classMethod='com.shawf.controller.IndexController.blog', args=[32, {}]}
+2020-08-17 17:31:30.017  INFO 6792 --- [http-nio-8080-exec-2] com.shawf.aspect.LogAspect               : Result:blog
+2020-08-17 17:31:30.373  INFO 6792 --- [http-nio-8080-exec-7] com.shawf.aspect.LogAspect               : Request:RequestLog{url='http://127.0.0.1:8080/footer/newBlog', ip='127.0.0.1', classMethod='com.shawf.controller.IndexController.newBlogList', args=[{}]}
+2020-08-17 17:31:30.453  INFO 6792 --- [http-nio-8080-exec-10] com.shawf.aspect.LogAspect               : Request:RequestLog{url='http://127.0.0.1:8080/comments/32', ip='127.0.0.1', classMethod='com.shawf.controller.CommentController.getComments', args=[32, {}]}
+2020-08-17 17:31:30.527  INFO 6792 --- [http-nio-8080-exec-7] com.shawf.aspect.LogAspect               : Result:_modes::newBlogList
+2020-08-17 17:31:31.000  INFO 6792 --- [http-nio-8080-exec-10] com.shawf.aspect.LogAspect               : Result:blog::commentList

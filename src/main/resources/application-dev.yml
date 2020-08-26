@@ -1,0 +1,22 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://106.15.95.28:3306/shawf-blog?useUnicode=true&characterEncoding=utf-8&useSSL=true
+    username: root
+    password: li1329
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  thymeleaf:
+    cache: false
+logging:
+  level:
+    root: info
+    com.shawf: debug
+  file: logs/blog.log
+server:
+  port: 8080
+
+
+

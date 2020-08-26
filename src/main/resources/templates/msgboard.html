@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head th:replace="_modes :: head(~{::title})">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>留言板</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.css">
+    <link rel="stylesheet" href="../static/css/typo.css">
+    <link rel="stylesheet" href="../static/css/animate.css">
+    <link rel="stylesheet" href="../static/lib/prism/prism.css">
+    <link rel="stylesheet" href="../static/lib/tocbot/tocbot.css">
+    <link rel="stylesheet" href="../static/css/me.css">
+</head>
+<body>
+<!--导航-->
+<nav th:replace="_modes :: menu(5)" class="ui inverted attached segment m-padded-tb-mini m-shadow-small">
+
+</nav>
+
+<div id="waypoint" class="m-container-small m-padded-tb-big animated fadeIn" th:fragment="commentList">
+<div class="ui container">
+    <div class="ui bottom attached segment m-padded-tb-large">
+        <!--留言区域-->
+        <div class="ui raised card" style="width: 90%" id="comment-card" >
+        <div id="comment-form" class="ui form m-padded-tlr">
+            <input type="hidden" name="blog.id" value="-1">
+            <input type="hidden" name="parentComment.id" value="-1">
+            <div class="field">
+                <textarea name="content" placeholder="请输入评论信息..."></textarea>
+            </div>
+            <div class="fields">
+                <div class="field m-mobile-wide m-margin-bottom-small">
+                    <div class="ui left icon input">
+                        <i class="user icon"></i>
+                        <input type="text" name="nickName" placeholder="姓名 (必填)"
+                               th:value="${session.user}!=null ? ${session.user.nickName}">
+                    </div>
+                </div>
+                <div class="field m-mobile-wide m-margin-bottom-small">
+                    <div class="ui left icon input">
+                        <i class="mail icon"></i>
+                        <input type="text" name="email" placeholder="邮箱 (必填)"
+                               th:value="${session.user}!=null ? ${session.user.email}">
+                    </div>
+                </div>
+
+                <div class="field  m-margin-bottom-small m-mobile-wide">
+                    <!--<button id="emoji-btn" type="button" class="ui teal button m-mobile-wide ">-->
+                    <!--<i class="large smile outline icon" style="margin-right: -3px;margin-top: -5px"></i>-->
+                    <!--</button>-->
+                    <button id="commentpost-btn" type="button" class="ui teal button m-mobile-wide"><i
+                            class="edit icon"></i>发布
+                    </button>
+                </div>
+            </div>
+        </div>
+        </div>
+        <!--留言区域列表-->
+        <div id="comment-container" class="ui teal segment">
+                <div class="ui threaded comments" style="max-width: 100%;">
+                    <h3 class="ui dividing header">留言板</h3>
+                    <div  class="comment" th:each="comment : ${comments}" >
+                        <a class="avatar">
+                            <img src="https://unsplash.it/100/100?image=1005" th:src="@{${comment.headPhoto}}">
+                        </a>
+                        <div class="content" th:id="comment_+${comment.id}">
+                            <a class="author">
+                                <span th:text="${comment.nickName}">Matt</span>
+                                <div class="ui mini basic teal left pointing label m-padded-mini"
+                                     th:if="${comment.adminFlag}">博主
+                                </div>
+                            </a>
+                            <div class="metadata">
+                                <span class="date" th:text="${#dates.format(comment.createTime,'yyyy-MM-dd HH:mm')}">Today at 5:42PM</span>
+                            </div>
+                            <div class="text" th:text="${comment.content}">
+                                How artistic!
+                            </div>
+                            <div class="actions">
+                                <a class="reply" data-commentid="1" data-commentnickname="Matt"
+                                   th:attr="data-commentid=${comment.id},data-commentnickname=${comment.nickName}"
+                                   onclick="reply(this)">回复</a>
+                            </div>
+                        </div>
+                        <div class="comments" th:if="${#arrays.length(comment.subCommentList)}>0">
+                            <div class="comment" th:each="reply : ${comment.subCommentList}" >
+                                <a class="avatar">
+                                    <img src="https://unsplash.it/100/100?image=1005" th:src="@{${reply.headPhoto}}">
+                                </a>
+                                <div class="content" th:id="comment_+${reply.id}">
+                                    <a class="author">
+                                        <span th:text="${reply.nickName}">小红</span>
+                                        <div class="ui mini basic teal left pointing label m-padded-mini"
+                                             th:if="${reply.adminFlag}">博主
+                                        </div>
+                                        &nbsp;<span th:text="|@ ${reply.parentComment.nickName}|"
+                                                    class="m-teal">@ 小白</span>
+                                    </a>
+                                    <div class="metadata">
+                                        <span class="date"
+                                              th:text="${#dates.format(reply.createTime,'yyyy-MM-dd HH:mm')}">Today at 5:42PM</span>
+                                    </div>
+                                    <div class="text" th:text="${reply.content}">
+                                        How artistic!
+                                    </div>
+                                    <div class="actions">
+                                        <a class="reply" data-commentid="1" data-commentnickname="Matt"
+                                           th:attr="data-commentid=${reply.id},data-commentnickname=${reply.nickName}"
+                                           onclick="reply(this)">回复</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/*-->
+                    <!--*/-->
+                    </div>
+                </div>
+        </div>
+
+    </div>
+</div>
+
+<!--底部footer-->
+<footer th:replace="_modes :: footer" class="ui inverted vertical segment m-padded-tb-massive">
+
+</footer>
+
+<!--/*/<th:block th:replace="_modes :: script">/*/-->
+
+<!--/*/</th:block>/*/-->
+
+<script th:inline="javascript">
+
+    // $(function () {
+    //     $("#comment-container").load("msgboard");
+    // });
+
+    //评论表单验证
+    $('.ui.form').form({
+        fields: {
+            title: {
+                identifier: 'content',
+                rules: [{
+                    type: 'empty',
+                    prompt: '请输入评论内容'
+                }
+                ]
+            },
+            content: {
+                identifier: 'nickName',
+                rules: [{
+                    type: 'empty',
+                    prompt: '请输入你的大名'
+                }]
+            },
+            type: {
+                identifier: 'email',
+                rules: [{
+                    type: 'email',
+                    prompt: '请填写正确的邮箱地址'
+                }]
+            }
+        }
+    });
+
+    $('#emoji-btn').click(function () {
+        
+    });
+
+
+    $('#commentpost-btn').click(function () {
+        var boo = $('.ui.form').form('validate form');
+        if (boo) {
+            console.log('校验成功');
+            postData();
+        } else {
+            console.log('校验失败');
+        }
+
+    });
+
+    function postData() {
+        $("#waypoint").load(/*[[@{/savemsgboard}]]*/"", {
+            "blog.id": $("[name='blog.id']").val(),
+            "parentComment.id": $("[name='parentComment.id']").val(),
+            "nickName": $("[name='nickName']").val(),
+            "email": $("[name='email']").val(),
+            "content": $("[name='content']").val()
+        }, function (responseTxt, statusTxt, xhr) {
+            clearContent();
+        });
+
+    }
+
+    function clearContent() {
+        $("[name='content']").val('');
+        $("[name='parentComment.id']").val(-1);
+        $("[name='content']").attr("placeholder", "请输入评论信息...");
+    }
+
+
+    function reply(obj) {
+        var commentId = $(obj).data('commentid');
+        var commentNickname = $(obj).data('commentnickname');
+        $("[name='content']").attr("placeholder", "@" + commentNickname).focus();
+        $("[name='parentComment.id']").val(commentId);
+        $("#comment_"+commentId).append($("#comment-card"));
+        // $(window).scrollTo($("#comment_"+commentId),500);
+    }
+
+
+
+</script>
+</body>
+</html>
