@@ -18,48 +18,48 @@
 </nav>
 
 <div id="waypoint" class="m-container-small m-padded-tb-big animated fadeIn" th:fragment="commentList">
-<div class="ui container">
-    <div class="ui bottom attached segment m-padded-tb-large">
-        <!--留言区域-->
-        <div class="ui raised card" style="width: 90%" id="comment-card" >
-        <div id="comment-form" class="ui form m-padded-tlr">
-            <input type="hidden" name="blog.id" value="-1">
-            <input type="hidden" name="parentComment.id" value="-1">
-            <div class="field">
-                <textarea name="content" placeholder="请输入评论信息..."></textarea>
-            </div>
-            <div class="fields">
-                <div class="field m-mobile-wide m-margin-bottom-small">
-                    <div class="ui left icon input">
-                        <i class="user icon"></i>
-                        <input type="text" name="nickName" placeholder="姓名 (必填)"
-                               th:value="${session.user}!=null ? ${session.user.nickName}">
+    <div class="ui container">
+        <div class="ui bottom attached segment m-padded-tb-large">
+            <!--留言区域-->
+            <div class="ui raised card" style="width: 90%" id="comment-card">
+                <div id="comment-form" class="ui form m-padded-tlr">
+                    <input type="hidden" name="blog.id" value="-1">
+                    <input type="hidden" name="parentComment.id" value="-1">
+                    <div class="field">
+                        <textarea name="content" placeholder="请输入评论信息..."></textarea>
                     </div>
-                </div>
-                <div class="field m-mobile-wide m-margin-bottom-small">
-                    <div class="ui left icon input">
-                        <i class="mail icon"></i>
-                        <input type="text" name="email" placeholder="邮箱 (必填)"
-                               th:value="${session.user}!=null ? ${session.user.email}">
-                    </div>
-                </div>
+                    <div class="fields">
+                        <div class="field m-mobile-wide m-margin-bottom-small">
+                            <div class="ui left icon input">
+                                <i class="user icon"></i>
+                                <input type="text" name="nickName" placeholder="姓名 (必填)"
+                                       th:value="${session.user}!=null ? ${session.user.nickName}">
+                            </div>
+                        </div>
+                        <div class="field m-mobile-wide m-margin-bottom-small">
+                            <div class="ui left icon input">
+                                <i class="mail icon"></i>
+                                <input type="text" name="email" placeholder="邮箱 (必填)"
+                                       th:value="${session.user}!=null ? ${session.user.email}">
+                            </div>
+                        </div>
 
-                <div class="field  m-margin-bottom-small m-mobile-wide">
-                    <!--<button id="emoji-btn" type="button" class="ui teal button m-mobile-wide ">-->
-                    <!--<i class="large smile outline icon" style="margin-right: -3px;margin-top: -5px"></i>-->
-                    <!--</button>-->
-                    <button id="commentpost-btn" type="button" class="ui teal button m-mobile-wide"><i
-                            class="edit icon"></i>发布
-                    </button>
+                        <div class="field  m-margin-bottom-small m-mobile-wide">
+                            <!--<button id="emoji-btn" type="button" class="ui teal button m-mobile-wide ">-->
+                            <!--<i class="large smile outline icon" style="margin-right: -3px;margin-top: -5px"></i>-->
+                            <!--</button>-->
+                            <button id="commentpost-btn" type="button" class="ui teal button m-mobile-wide"><i
+                                    class="edit icon"></i>发布
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-        </div>
-        <!--留言区域列表-->
-        <div id="comment-container" class="ui teal segment">
+            <!--留言区域列表-->
+            <div id="comment-container" class="ui teal segment">
                 <div class="ui threaded comments" style="max-width: 100%;">
                     <h3 class="ui dividing header">留言板</h3>
-                    <div  class="comment" th:each="comment : ${comments}" >
+                    <div class="comment" th:each="comment : ${comments}">
                         <a class="avatar">
                             <img src="https://unsplash.it/100/100?image=1005" th:src="@{${comment.headPhoto}}">
                         </a>
@@ -71,7 +71,8 @@
                                 </div>
                             </a>
                             <div class="metadata">
-                                <span class="date" th:text="${#dates.format(comment.createTime,'yyyy-MM-dd HH:mm')}">Today at 5:42PM</span>
+                                    <span class="date"
+                                          th:text="${#dates.format(comment.createTime,'yyyy-MM-dd HH:mm')}">Today at 5:42PM</span>
                             </div>
                             <div class="text" th:text="${comment.content}">
                                 How artistic!
@@ -83,9 +84,10 @@
                             </div>
                         </div>
                         <div class="comments" th:if="${#arrays.length(comment.subCommentList)}>0">
-                            <div class="comment" th:each="reply : ${comment.subCommentList}" >
+                            <div class="comment" th:each="reply : ${comment.subCommentList}">
                                 <a class="avatar">
-                                    <img src="https://unsplash.it/100/100?image=1005" th:src="@{${reply.headPhoto}}">
+                                    <img src="https://unsplash.it/100/100?image=1005"
+                                         th:src="@{${reply.headPhoto}}">
                                 </a>
                                 <div class="content" th:id="comment_+${reply.id}">
                                     <a class="author">
@@ -114,8 +116,8 @@
                     </div>
                     <!--/*-->
                     <!--*/-->
-                    </div>
                 </div>
+            </div>
         </div>
 
     </div>
@@ -165,11 +167,10 @@
     });
 
     $('#emoji-btn').click(function () {
-        
+
     });
 
-
-    $('#commentpost-btn').click(function () {
+    $('#waypoint').on("click","#commentpost-btn",function(e){
         var boo = $('.ui.form').form('validate form');
         if (boo) {
             console.log('校验成功');
@@ -177,8 +178,18 @@
         } else {
             console.log('校验失败');
         }
-
     });
+
+    // $('#commentpost-btn').click(function () {
+    //     var boo = $('.ui.form').form('validate form');
+    //     if (boo) {
+    //         console.log('校验成功');
+    //         postData();
+    //     } else {
+    //         console.log('校验失败');
+    //     }
+    //
+    // });
 
     function postData() {
         $("#waypoint").load(/*[[@{/savemsgboard}]]*/"", {
@@ -203,12 +214,10 @@
     function reply(obj) {
         var commentId = $(obj).data('commentid');
         var commentNickname = $(obj).data('commentnickname');
+        $("#comment_" + commentId).append($("#comment-card"));
         $("[name='content']").attr("placeholder", "@" + commentNickname).focus();
         $("[name='parentComment.id']").val(commentId);
-        $("#comment_"+commentId).append($("#comment-card"));
-        // $(window).scrollTo($("#comment_"+commentId),500);
     }
-
 
 
 </script>
